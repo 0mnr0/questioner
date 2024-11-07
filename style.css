@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+* {font-family: "Nunito", serif; color: white; transition: all .3s}
+
+
+body, .Game {background: transparent; z-index: 2; position: relative}
+
+div.startLogo {width: 100%; text-align: center; display: flex; flex-direction: column; position: fixed; top: 50%; transform: translate(0%, -50%)}
+button.startGame {width: 20%; min-width: 200px; text-align: center; position: fixed; top: 75%; left: 50%; transform: translate(-50%, -25%)}
+button.startGame {border-radius: 8px; outline: none; border: solid 2px transparent; padding: 6px; background: linear-gradient(black 0 0) padding-box, linear-gradient(to right, #9c20aa, #fb3570) border-box;}
+div.startLogo span.previewTitle {font-size: 32px}
+div.startLogo span.description {font-size: 16px}
+
+
+div.background {background: #121212; width: 100%; height: 100%; position: fixed; z-index: 1; filter: brightness(0.3)}
+div.GameWindow span#QuestionText {top: 15%; font-size: 48px; width: 100%; text-align: center; position: relative; display: block}
+div.GameWindow div.PossibleAwnsers span {font-size: 28px; width: 100%; display: block; text-align: center; margin-bottom: 20px}
+div.GameWindow div.PossibleAwnsers {left: 50%; font-size: 24px; top: 45%; transform: translate(-50%, -45%); position: relative}
+div.GameWindow  * {width: fit-content}
+div.GameWindow {width: 100%; height: 100%; position: fixed; display: none}
+
+div.Game div.GameWindow div.PossibleAwnsers {border-top: solid 1px white; margin-top: 5%; padding-top: 20px; width: 70%; height: 70%; }
+div.Game div.GameWindow div.PossibleAwnsers #list {width: 100%; display: flex; flex-wrap: wrap; gap: 20px; height: auto; overflow: auto; padding: 20px; height: auto; max-height: 100%}
+div.Game div.GameWindow div.PossibleAwnsers #list button.possibleVariant {width: 100%; background: #121212; border: solid 2px white; border-radius: 12px; padding: 10px}
+div.Game div.GameWindow div.PossibleAwnsers #list button.possibleVariant:hover {scale: 1.02}
+
+
+
+div.Game div.GameWindow div.PossibleAwnsers #list button.possibleVariant.rightChoosed {background: #3e4f3b; border-color: #1eff00}
+div.Game div.GameWindow div.PossibleAwnsers #list button.possibleVariant.wrongChoosed {background: #4f3b3b; border-color: #ff0000; box-shadow: 0px 0px 16px 5px #ff00008c}
+div.Game div.GameWindow div.PossibleAwnsers #list button.possibleVariant.next {margin-bottom: 70px; background: #4f473b; border-color: #ffb100; padding: 10px; height: 60px}
