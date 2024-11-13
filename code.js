@@ -1,5 +1,46 @@
+const Questions = {
+	0: {
+		'question': "Какое основное предназначение имела Государственная Дума?",
+		'awnsers': {
+			0: 'Представлять интересы населения и участвовать в законодательном процессе',
+			1: 'Назначение на должность и освобождение от должности генерального прокурора РФ и его заместителей, зампредседателя Счетной палаты и половины состава ее аудиторов',
+			2: 'Принятие законов, имеющих юридическую силу, регулирующих важнейшие общественные отношения и реализуемых в основном другими ветвями власти'
+		},
+		correct: 0
+	},
+	1: {
+		'question': "Сколько созывов Государственной Думы было в период с 1906 по 1917 год?",
+		'awnsers': {
+			0: 'Четыре созыва',
+			1: 'Два созыва',
+			2: 'Пять созыва'
+		},
+		correct: 0
+	},
+	2: {
+		'question': "Каковы были полномочия Государственной Думы?",
+		'awnsers': {
+			0: 'Назначение на должность и освобождение от должности Генерального прокурора РФ и заместителей Генерального прокурора РФ',
+			1: 'Обсуждение и принятие законов, контроль над бюджетом, возможность выражать недоверие правительству',
+			2: 'Принятие конституции и поправок к ней, а также устава субъекта РФ и поправок к нему'
+		},
+		correct: 1
+	},
+	3: {
+		'question': "Какое событие привело к распуску Государственной Думы в 1917 году?",
+		'awnsers': {
+			0: 'Начала периода двоевластия',
+			1: 'Октябрьская социалистическая революция',
+			2: 'Февральская революция '
+		},
+		correct: 2
+	}
+}
+
+
+
+
 function getRandomLightColor(min = 200, max = 255) {
-    // Генерируем случайные значения RGB в заданном диапазоне
     const r = Math.floor(Math.random() * (max - min + 1)) + min;
     const g = Math.floor(Math.random() * (max - min + 1)) + min;
     const b = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -15,36 +56,11 @@ function getAdjacentColor(baseColor, variation = 20, min = 200, max = 255) {
 }
 
 
-const Questions = {
-	0: {
-		'question': "Кто, где, когда?",
-		'awnsers': {
-			0: 'Хз',
-			1: 'Я чё, знаю чтоли?',
-			2: 'Никто, нигде и никогда',
-			3: 'Без понятия'
-		},
-		correct: 2
-	},
-	1: {
-		'question': "Вовчик?",
-		'awnsers': {
-			0: 'Гений',
-			1: 'Не лох',
-			2: 'Вовчик слазиет',
-			3: 'Лошпед в квадрате'
-		},
-		correct: 3
-	}
-}
-
-
-
 
 const ShowGameElements = function(){
 	document.querySelectorAll('div.startLogo').forEach(logoGame => {logoGame.style.display='none'})
 	document.querySelectorAll('.startLogotype').forEach(logoGame => {logoGame.style.display='none'})
-	document.querySelectorAll('.GameWindow').forEach(game => {game.style.display='block'})
+	document.querySelectorAll('.GameWindow').forEach(game => {game.classList.add('visible')})
 }
 
 
